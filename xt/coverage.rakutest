@@ -1,5 +1,0 @@
-use Test::Coverage;
-
-must-be-complete;
-
-# vim: expandtab shiftwidth=4

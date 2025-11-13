@@ -39,29 +39,29 @@ The following is transcribed from a
 L<StackOverflow answer|https://stackoverflow.com/questions/50399784/is-there-a-purpose-or-benefit-in-prohibiting-sigilless-variables-from-rebinding/50401989#50401989>
 by I<Jonathan Worthington>.
 
-=item Syntactic disambiguation
+=head3 Syntactic disambiguation
 
 You can call a variable whatever you want, even if there happens to be
 a keyword with that name
 
-=item Readability
+=head3 Readability
 
 The data in the program stands out thanks to the sigil.
 
-=item Defining assignment semantics
+=head3 Defining assignment semantics
 
 In Raku assignment means "copy in to", thus C<my @a = @b> means iterate
 C<@b> and put each thing in it into C<@a>, thus any future assignments
 to C<@b> will not affect C<@a>.
 
-=item Restricting what can be bound there
+=head3 Restricting what can be bound there
 
 Only C<Positional> things to C<@>, only C<Associative> things to C<%>,
 only C<Callable> things to C<&>.
 
 In the case of the C<$>, controlling what will be considered a single item.
 
-=item Interpolation in double quoted strings
+=head3 Interpolation in double quoted strings
 
 Without a sigil, interpolation can no distinguish between a variable and
 a word.

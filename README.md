@@ -35,25 +35,25 @@ Note that this module only aliases the scalar sigil.
 
 The following is transcribed from a [StackOverflow answer](https://stackoverflow.com/questions/50399784/is-there-a-purpose-or-benefit-in-prohibiting-sigilless-variables-from-rebinding/50401989#50401989) by *Jonathan Worthington*.
 
-  * Syntactic disambiguation
+### Syntactic disambiguation
 
 You can call a variable whatever you want, even if there happens to be a keyword with that name
 
-  * Readability
+### Readability
 
 The data in the program stands out thanks to the sigil.
 
-  * Defining assignment semantics
+### Defining assignment semantics
 
 In Raku assignment means "copy in to", thus `my @a = @b` means iterate `@b` and put each thing in it into `@a`, thus any future assignments to `@b` will not affect `@a`.
 
-  * Restricting what can be bound there
+### Restricting what can be bound there
 
 Only `Positional` things to `@`, only `Associative` things to `%`, only `Callable` things to `&`.
 
 In the case of the `$`, controlling what will be considered a single item.
 
-  * Interpolation in double quoted strings
+### Interpolation in double quoted strings
 
 Without a sigil, interpolation can no distinguish between a variable and a word.
 
