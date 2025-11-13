@@ -60,7 +60,7 @@ Without a sigil, interpolation can no distinguish between a variable and a word.
 PREREQUISITES
 =============
 
-This module requires the 2023.10 release of the Rakudo compiler.
+This module requires the 2023.10 release of the Rakudo compiler, or later.
 
 INSPIRATION
 ===========

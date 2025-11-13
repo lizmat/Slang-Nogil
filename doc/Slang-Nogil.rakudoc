@@ -68,7 +68,7 @@ a word.
 
 =head1 PREREQUISITES
 
-This module requires the 2023.10 release of the Rakudo compiler.
+This module requires the 2023.10 release of the Rakudo compiler, or later.
 
 =head1 INSPIRATION
 
