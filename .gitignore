@@ -1,0 +1,4 @@
+.precomp/
+/Slang-Nogil-*
+/releases/*
+*.rakucov

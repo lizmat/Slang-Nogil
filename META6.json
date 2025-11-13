@@ -1,0 +1,37 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends": [
+  ],
+  "depends": {
+    "runtime": {
+      "requires": [
+        "Slangify:ver<0.0.4+>:auth<zef:lizmat>"
+      ]
+    }
+  },
+  "description": "allow sigilless scalar variables",
+  "license": "Artistic-2.0",
+  "name": "Slang::Nogil",
+  "provides": {
+    "Slang::Nogil": "lib/Slang/Nogil.rakumod"
+  },
+  "raku": "6.c",
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/Slang-Nogil.git",
+  "support": {
+    "bugtracker": "https://github.com/lizmat/Slang-Nogil/issues",
+    "email": "liz@raku.rocks",
+    "source": "https://github.com/lizmat/Slang-Nogil.git"
+  },
+  "tags": [
+    "SLANG",
+    "SIGIL"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

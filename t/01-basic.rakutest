@@ -1,0 +1,16 @@
+use Test;
+use Slang::Nogil;
+
+plan 4;
+
+my a = 42;
+is a, 42, 'does it work with scalars';
+is a + a, 84, 'does it work with expressions';
+
+my @a = ^100;
+is @a[a], 42, 'can we use it as an index';
+
+my %h = a => 666;
+is %h<a>, 666, 'can we use it as a key';
+
+# vim: expandtab shiftwidth=4
