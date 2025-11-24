@@ -1,7 +1,7 @@
 use Test;
 use Slang::Nogil;
 
-plan 4;
+plan 8;
 
 my a = 42;
 is a, 42, 'does it work with scalars';
@@ -12,5 +12,15 @@ is @a[a], 42, 'can we use it as an index';
 
 my %h = a => 666;
 is %h<a>, 666, 'can we use it as a key';
+
+my 👍 = 42;
+is 👍, 42, 'does it work with scalars';
+is 👍 + 👍, 84, 'does it work with expressions';
+
+my @b = ^100;
+is @b[👍], 42, 'can we use it as an index';
+
+my %i = 👍 => 666;
+is %i{👍}, 666, 'can we use it as a key';
 
 # vim: expandtab shiftwidth=4

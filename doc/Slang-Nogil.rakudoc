@@ -11,16 +11,22 @@ use Slang::Nogil;
 
 my a = 42;
 say a;  # 42
+
+my 👍 = 42;
+say 👍;  # 42
 =end code
 
 =head1 DESCRIPTION
 
-Slang::Nogil modifies the Raku grammar to make it possible to use
-scalar variables B<without> needing a B<$> sigil.
+The C<Slang::Nogil> distribution modifies the Raku grammar to make it
+possible to use scalar variables B<without> needing a B<$> sigil.
 
 You are B<strongly> recommended to B<keep> using the C<@>, C<%> and C<&>
 sigils where appropriate.  If those are absent from your code, guess one
 is writing "baby Raku" and losing some awesome compiler optimizations.
+
+As a bonus, C<Slang::Nogil> also one to use simple emojis (C<.chars == 1>)
+as a scalar variable as well.
 
 =head2 Why are sigils useful anyway ?
 
@@ -72,8 +78,9 @@ This module requires the 2023.10 release of the Rakudo compiler, or later.
 
 =head1 INSPIRATION
 
-Inspired by the now obsolete L<Slang::Nogil|https://github.com/tinmarino/nogil>
-distribution by I<Martin Tourneboeuf>.
+Inspired by the now obsolete L<C<Slang::Nogil>|https://github.com/tinmarino/nogil>
+distribution by I<Martin Tourneboeuf>, and code stolen from the
+L<C<Slang::Emoji>|https://raku.land/zef:lizmat/Slang::Emoji> distribution.
 
 =head1 AUTHOR
 

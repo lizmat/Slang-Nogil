@@ -13,14 +13,19 @@ use Slang::Nogil;
 
 my a = 42;
 say a;  # 42
+
+my 👍 = 42;
+say 👍;  # 42
 ```
 
 DESCRIPTION
 ===========
 
-Slang::Nogil modifies the Raku grammar to make it possible to use scalar variables **without** needing a **$** sigil.
+The `Slang::Nogil` distribution modifies the Raku grammar to make it possible to use scalar variables **without** needing a **$** sigil.
 
 You are **strongly** recommended to **keep** using the `@`, `%` and `&` sigils where appropriate. If those are absent from your code, guess one is writing "baby Raku" and losing some awesome compiler optimizations.
+
+As a bonus, `Slang::Nogil` also one to use simple emojis (`.chars == 1`) as a scalar variable as well.
 
 Why are sigils useful anyway ?
 ------------------------------
@@ -65,7 +70,7 @@ This module requires the 2023.10 release of the Rakudo compiler, or later.
 INSPIRATION
 ===========
 
-Inspired by the now obsolete [Slang::Nogil](https://github.com/tinmarino/nogil) distribution by *Martin Tourneboeuf*.
+Inspired by the now obsolete [`Slang::Nogil`](https://github.com/tinmarino/nogil) distribution by *Martin Tourneboeuf*, and code stolen from the [`Slang::Emoji`](https://raku.land/zef:lizmat/Slang::Emoji) distribution.
 
 AUTHOR
 ======
