@@ -1,7 +1,15 @@
 use Test;
 use Slang::Nogil;
 
-plan 8;
+my constant @core = <
+  class constant grammar method module native package regex role rule
+  sub submethod token
+>;
+my constant @type = <
+  int Int str Str num Num
+>;
+
+plan 8 + @core + @type;
 
 my a = 42;
 is a, 42, 'does it work with scalars';
@@ -22,5 +30,13 @@ is @b[👍], 42, 'can we use it as an index';
 
 my %i = 👍 => 666;
 is %i{👍}, 666, 'can we use it as a key';
+
+for @core {
+    lives-ok { "my $_ foo \{ }" }, "does 'my $_ foo \{ }' parse";
+}
+
+for @type {
+    lives-ok { "my $_ foo" }, "does 'my $_ foo' parse";
+}
 
 # vim: expandtab shiftwidth=4
